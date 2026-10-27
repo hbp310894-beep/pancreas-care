@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Pancreas Comprehensive Care - Specialized pancreatic clinic led by Dr. Rajesh Puri and Dr. Hitesh Panchal at Medanta – The Medicity, Gurugram. Advanced EUS, ERCP, necrosectomy, and multimodal pancreatic disease management.">
+<meta name="theme-color" content="#ffffff">
+<title>Pancreas Comprehensive Care | Medanta – The Medicity, Gurugram</title>
+<style>
+:root{
+  --red-primary:#d32f2f;
+  --red-dark:#9a0007;
+  --red-light:#ffebee;
+  --red-soft:#fff5f5;
+  --red-border:#ffcdd2;
+  --dark:#1c242c;
+  --muted:#5a6872;
+  --border:#eef2f5;
+  --white:#ffffff;
+  --radius:20px;
+  --shadow:0 14px 40px rgba(211,47,47,0.08);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--dark);background:var(--white);line-height:1.65}
+a{color:inherit}
+button,input,select,textarea{font:inherit}
+.wrap{width:min(1180px,calc(100% - 36px));margin:auto}
+
+/* Topbar */
+.topbar{background:var(--red-soft);border-bottom:1px solid var(--red-border);font-size:.84rem;padding:9px 0;color:#5c1d1d}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.topbar-phone a{color:var(--red-primary);font-weight:800;text-decoration:none;margin-left:8px}
+.topbar-phone a:hover{text-decoration:underline}
+
+/* Navigation */
+.nav{position:sticky;top:0;z-index:40;background:rgba(255,255,255,0.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-inner{min-height:86px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand-group{display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand-icon{width:42px;height:42px;background:var(--red-light);color:var(--red-primary);border-radius:12px;display:grid;place-items:center;font-size:1.35rem;font-weight:900}
+.brand-title{font-size:1.15rem;font-weight:850;color:var(--dark);letter-spacing:-.02em;line-height:1.2}
+.brand-title small{display:block;font-size:.7rem;font-weight:700;color:var(--red-primary);letter-spacing:.04em;text-transform:uppercase}
+.brand-divider{width:1px;height:42px;background:var(--border)}
+
+/* Medanta Logo */
+.medanta-logo-wrap{display:flex;align-items:center;text-decoration:none}
+.medanta-logo-img{height:46px;width:auto;max-width:190px;object-fit:contain;display:block}
+
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-links a{text-decoration:none;font-size:.92rem;font-weight:650;color:var(--dark)}
+.nav-links a:hover{color:var(--red-primary)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 20px;border-radius:999px;border:1px solid transparent;background:var(--red-primary);color:#fff;font-weight:750;text-decoration:none;cursor:pointer;transition:.2s}
+.btn:hover{background:var(--red-dark);transform:translateY(-1px)}
+.btn.outline{background:transparent;border-color:var(--red-border);color:var(--red-primary)}
+.btn.outline:hover{background:var(--red-light)}
+.btn.light{background:#fff;color:var(--red-primary)}
+.menu-btn{display:none;background:none;border:1px solid var(--border);border-radius:10px;padding:8px 12px;font-size:1.2rem}
+
+/* Hero */
+.hero{background:linear-gradient(180deg,var(--red-soft) 0%,#ffffff 100%);padding:65px 0 60px;border-bottom:1px solid var(--border)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:45px}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:var(--red-light);border:1px solid var(--red-border);border-radius:999px;color:var(--red-primary);font-size:.75rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;margin-bottom:14px}
+h1{font-size:clamp(2.3rem,4.4vw,3.9rem);line-height:1.15;letter-spacing:-.03em;color:var(--dark);margin:0 0 16px}
+h1 span{color:var(--red-primary)}
+.lead{font-size:1.08rem;color:var(--muted);max-width:620px;margin-bottom:24px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+.trust-points{display:flex;gap:20px;flex-wrap:wrap;color:var(--muted);font-size:.87rem;font-weight:650}
+.trust-points span:before{content:"✓";color:var(--red-primary);font-weight:900;margin-right:6px}
+
+/* High-Detail Anatomical Pancreas Art Box */
+.pancreas-art-box{background:#ffffff;border:1px solid var(--red-border);border-radius:30px;box-shadow:var(--shadow);padding:24px;position:relative;display:grid;place-items:center}
+.pancreas-svg{width:100%;max-width:440px;height:auto;filter:drop-shadow(0 12px 18px rgba(211,47,47,0.09))}
+.organ-tag{position:absolute;background:#fff;border:1px solid var(--red-border);padding:8px 14px;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,0.05);font-size:.8rem;font-weight:750;color:var(--dark)}
+.organ-tag small{display:block;color:var(--red-primary);font-size:.7rem}
+.tag-top{top:18px;left:18px}
+.tag-bottom{bottom:18px;right:18px}
+
+/* Sections */
+.section{padding:80px 0}
+.section.soft{background:var(--red-soft)}
+.section-head{max-width:760px;margin-bottom:40px}
+.section-head h2{font-size:clamp(1.9rem,3.2vw,2.6rem);margin:6px 0 12px;color:var(--dark);letter-spacing:-.03em}
+.section-head p{color:var(--muted);font-size:1.04rem;margin:0}
+
+/* Doctor Profiles */
+.doctors{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.doctor-card{background:#ffffff;border:1px solid var(--red-border);border-radius:24px;padding:26px;box-shadow:var(--shadow);display:flex;gap:22px;align-items:flex-start}
+.doctor-photo-wrap{flex:0 0 140px;width:140px;height:175px;border-radius:16px;overflow:hidden;background:#ffffff;border:2px solid var(--red-light);box-shadow:0 4px 12px rgba(0,0,0,0.06)}
+.doctor-photo{width:100%;height:100%;object-fit:cover;object-position:top center;background:#ffffff;display:block}
+.doctor-info{flex:1}
+.doctor-info h3{margin:0 0 4px;font-size:1.32rem;color:var(--dark)}
+.doctor-tag{display:inline-block;background:var(--red-light);color:var(--red-primary);padding:3px 10px;border-radius:999px;font-size:.72rem;font-weight:800;text-transform:uppercase;margin-bottom:6px}
+.doctor-designation{color:var(--red-primary);font-weight:800;font-size:.95rem;margin-bottom:4px}
+.doctor-quals{font-size:.82rem;font-weight:650;color:#44525d;background:#fafbfc;border:1px solid #edf1f4;padding:5px 9px;border-radius:8px;margin-bottom:10px;line-height:1.4}
+.doctor-desc{font-size:.88rem;color:var(--muted);line-height:1.55;margin:0 0 10px}
+.doctor-loc{font-size:.82rem;font-weight:750;color:var(--dark);display:flex;align-items:center;gap:6px}
+
+/* Detailed Condition Cards */
+.grid{display:grid;gap:24px}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.card{background:#fff;border:1px solid #f0e6e6;border-radius:var(--radius);padding:28px;box-shadow:0 4px 18px rgba(0,0,0,0.02);display:flex;flex-direction:column;justify-content:space-between}
+.card-content h3{margin:0 0 8px;font-size:1.22rem;color:var(--dark)}
+.card-content p{margin:0 0 14px;color:var(--muted);font-size:.92rem;line-height:1.6}
+.clinical-list{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:6px}
+.clinical-list li{font-size:.84rem;color:#394854;display:flex;align-items:flex-start;gap:8px}
+.clinical-list li:before{content:"•";color:var(--red-primary);font-weight:900}
+.icon-box{width:46px;height:46px;border-radius:13px;background:var(--red-light);color:var(--red-primary);display:grid;place-items:center;font-size:1.3rem;margin-bottom:16px;font-weight:900}
+
+/* Detailed Procedure Items */
+.procedure-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.procedure-detail-card{background:#ffffff;border:1px solid var(--red-border);padding:26px;border-radius:20px;box-shadow:0 4px 16px rgba(0,0,0,0.02)}
+.procedure-detail-card h3{margin:0 0 6px;color:var(--dark);font-size:1.16rem;display:flex;align-items:center;gap:8px}
+.procedure-badge{background:var(--red-light);color:var(--red-primary);padding:3px 9px;border-radius:999px;font-size:.72rem;font-weight:800;text-transform:uppercase}
+.procedure-detail-card p{color:var(--muted);font-size:.91rem;line-height:1.6;margin:0 0 12px}
+.procedure-detail-card .tech-points{background:#fdf9f9;border-left:3px solid var(--red-primary);padding:8px 12px;border-radius:0 8px 8px 0;font-size:.83rem;color:#495763;line-height:1.5}
+
+/* Contact CTA */
+.cta-box{background:linear-gradient(135deg,var(--red-primary) 0%,var(--red-dark) 100%);color:#ffffff;border-radius:26px;padding:46px;display:flex;justify-content:space-between;align-items:center;gap:26px}
+.cta-box h2{color:#fff;margin:0 0 8px;font-size:1.85rem}
+.cta-box p{margin:0;color:rgba(255,255,255,0.9);max-width:580px}
+
+/* Footer */
+.footer{background:#161c22;color:#d3dbe1;padding:55px 0 24px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:35px}
+.footer h3{color:#ffffff;font-size:1.05rem;margin:0 0 14px}
+.footer a{color:#bcc6ce;text-decoration:none}
+.footer a:hover{color:#ffffff;text-decoration:underline}
+.footer p,.footer li{font-size:.89rem;color:#9da9b3}
+.footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.copyright{border-top:1px solid #29343d;margin-top:35px;padding-top:20px;font-size:.8rem;color:#7d8c97}
+
+@media(max-width:960px){
+  .doctors,.hero-grid,.grid-3,.procedure-grid{grid-template-columns:1fr}
+  .nav-links{display:none;position:absolute;top:86px;left:0;right:0;background:#ffffff;border-bottom:1px solid var(--border);padding:20px;flex-direction:column;align-items:stretch}
+  .nav-links.open{display:flex}
+  .menu-btn{display:block}
+}
+@media(max-width:640px){
+  .doctor-card{flex-direction:column;align-items:center;text-align:center}
+  .cta-box{flex-direction:column;text-align:center;padding:30px}
+  .brand-divider{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+  <div class="wrap">
+    <span>Medanta – The Medicity, Gurugram • Institute of Digestive and Hepatobiliary Sciences</span>
+    <div class="topbar-phone">
+      <span>OPD Consultation & Direct Helpline:</span>
+      <a href="tel:+917984434399">📞 +91 79844 34399</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <div class="brand-group">
+      <a class="brand" href="#home">
+        <span class="brand-icon">✚</span>
+        <div class="brand-title">
+          Pancreas Comprehensive Care
+          <small>Medanta – The Medicity, Gurugram</small>
+        </div>
+      </a>
+      
+      <div class="brand-divider"></div>
+      
+      <!-- 2nd Image: Medanta Official Logo -->
+      <a class="medanta-logo-wrap" href="#home" title="Medanta – The Medicity">
+        <img src="English_Logo.jpg" alt="Medanta Hospital Logo" class="medanta-logo-img" onerror="this.onerror=null;this.src='image_268d3a.png';">
+      </a>
+    </div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#conditions">Conditions Evaluated</a>
+      <a href="#treatments">Interventions & Procedures</a>
+      <a href="#team">Our Specialists</a>
+      <a href="#contact">Contact & OPD</a>
+    </nav>
+
+    <div style="display:flex;align-items:center;gap:10px">
+      <a class="btn" href="tel:+917984434399">📞 79844 34399</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="badge">Advanced Pancreatobiliary Care</span>
+      <h1>Pancreas <span>Comprehensive Care</span></h1>
+      <p class="lead">Under the direct leadership of Dr. Rajesh Puri and Dr. Hitesh Panchal at Medanta – The Medicity, Gurugram. An internationally recognized tertiary center delivering advanced diagnostic endosonography, complex ERCP, transmural necrosectomy, and multimodal therapies for diseases of the pancreas.</p>
+      
+      <div class="hero-actions">
+        <a class="btn" href="tel:+917984434399">Schedule Consultation: 79844 34399 <span>→</span></a>
+        <a class="btn outline" href="#team">Meet the Consultants</a>
+      </div>
+
+      <div class="trust-points">
+        <span>Transmural EUS & LAMS Necrosectomy</span>
+        <span>High-Volume Pancreatic ERCP</span>
+        <span>Multidisciplinary GI Tumor Board</span>
+      </div>
+    </div>
+
+    <!-- Anatomical Pancreas Art Box -->
+    <div class="pancreas-art-box" aria-label="Anatomical illustration of the pancreas and biliary tree">
+      <div class="organ-tag tag-top">
+        Pancreatic Duct & Duodenum
+        <small>Interventional Endoscopy Suite</small>
+      </div>
+      
+      <svg class="pancreas-svg" viewBox="0 0 540 420" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="duodenumGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fff0f0"/>
+            <stop offset="50%" stop-color="#ffdada"/>
+            <stop offset="100%" stop-color="#f8bbd0"/>
+          </linearGradient>
+          <linearGradient id="pancreasGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#ffb4a2"/>
+            <stop offset="35%" stop-color="#e57373"/>
+            <stop offset="70%" stop-color="#ef5350"/>
+            <stop offset="100%" stop-color="#d32f2f"/>
+          </linearGradient>
+          <linearGradient id="bileDuctGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#a5d6a7"/>
+            <stop offset="60%" stop-color="#66bb6a"/>
+            <stop offset="100%" stop-color="#388e3c"/>
+          </linearGradient>
+          <linearGradient id="gallbladderGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#81c784"/>
+            <stop offset="100%" stop-color="#2e7d32"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Gallbladder -->
+        <path d="M 240 28 C 240 10, 275 8, 278 28 C 282 52, 265 95, 235 115 C 230 118, 222 110, 226 100 C 235 78, 240 50, 240 28 Z" 
+              fill="url(#gallbladderGrad)" stroke="#1b5e20" stroke-width="2"/>
+        
+        <!-- Duodenal C-Loop -->
+        <path d="M 125 70 C 45 110, 35 275, 125 330 C 180 365, 245 330, 270 270 C 285 235, 260 195, 235 195 C 175 195, 165 295, 130 285 C 75 250, 80 145, 145 105 Z" 
+              fill="url(#duodenumGrad)" stroke="#e57373" stroke-width="2.5"/>
+
+        <!-- Common Bile Duct (Choledochus) -->
+        <path d="M 226 100 C 220 135, 185 160, 168 198" fill="none" stroke="url(#bileDuctGrad)" stroke-width="10" stroke-linecap="round"/>
+
+        <!-- Pancreatic Parenchyma (Head, Body, Tail) -->
+        <path d="M 162 170 C 150 142, 178 126, 210 126 C 265 126, 320 110, 385 100 C 455 86, 505 102, 510 118 C 515 136, 480 155, 425 170 C 350 192, 268 218, 202 218 C 175 218, 165 198, 162 170 Z" 
+              fill="url(#pancreasGrad)" stroke="#b71c1c" stroke-width="2.5"/>
+
+        <!-- Pancreatic Uncinate Process -->
+        <path d="M 175 215 C 190 240, 220 250, 235 235 C 242 225, 230 215, 215 215 Z" 
+              fill="#e57373" stroke="#b71c1c" stroke-width="1.5"/>
+
+        <!-- Main Pancreatic Duct of Wirsung -->
+        <path d="M 168 198 C 195 186, 268 176, 340 154 C 405 138, 458 128, 488 120" 
+              fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+
+        <!-- Intercalated Side Branches -->
+        <path d="M 235 182 L 230 152 M 288 172 L 294 144 M 352 154 L 358 132 M 418 140 L 424 122 M 465 128 L 470 114" 
+              stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+
+        <!-- Accessory Duct of Santorini -->
+        <path d="M 235 182 C 215 165, 185 160, 158 162" fill="none" stroke="#ffffff" stroke-width="3" stroke-dasharray="4,3" stroke-linecap="round"/>
+
+        <!-- Major Duodenal Papilla (Ampulla of Vater) -->
+        <circle cx="168" cy="198" r="8" fill="#d32f2f" stroke="#ffffff" stroke-width="2.5"/>
+        <text x="60" y="228" font-size="12" fill="#9a0007" font-weight="700">Ampulla of Vater</text>
+        <line x1="140" y1="216" x2="162" y2="202" stroke="#9a0007" stroke-width="1.5"/>
+
+        <!-- Anatomical Labels -->
+        <text x="440" y="86" font-size="11" fill="#78909c" font-weight="700">Tail</text>
+        <text x="320" y="98" font-size="11" fill="#78909c" font-weight="700">Body</text>
+        <text x="175" y="116" font-size="11" fill="#78909c" font-weight="700">Head</text>
+      </svg>
+
+      <div class="organ-tag tag-bottom">
+        Medanta – The Medicity
+        <small>Gurugram, Haryana</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Specialists Section -->
+<section class="section" id="team">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="badge">Medical Leadership</span>
+      <h2>Meet Our Senior Faculty</h2>
+      <p>Decades of procedural pioneering in therapeutic endosonography, complicated pancreatobiliary ductal disease, and transluminal surgery.</p>
+    </div>
+
+    <div class="doctors">
+      <!-- 1st Image: Dr Rajesh Puri with white background -->
+      <article class="doctor-card">
+        <div class="doctor-photo-wrap">
+          <img src="rajesh puri.jpg" alt="Dr. Rajesh Puri - Vice Chairman Gastroenterology Medanta" class="doctor-photo" onerror="this.onerror=null;this.src='image_26903b.jpg';">
+        </div>
+        <div class="doctor-info">
+          <span class="doctor-tag">Interventional Gastroenterology</span>
+          <h3>Dr. Rajesh Puri</h3>
+          <div class="doctor-designation">Vice Chairman – Gastroenterology</div>
+          <div class="doctor-quals">D.N.B. (Gastroenterology) • M.D. (General Medicine) • M.B.B.S.</div>
+          <p class="doctor-desc">An internationally renowned pioneer in advanced therapeutic endoscopic ultrasound (EUS) and complex pancreatobiliary endoscopy. He has trained generations of endosonologists and leads global clinical programs in transluminal pancreatic drainage and interventions.</p>
+          <div class="doctor-loc">🏥 Medanta – The Medicity, Gurugram</div>
+        </div>
+      </article>
+
+      <!-- 2nd Doctor: Dr Hitesh Panchal -->
+      <article class="doctor-card">
+        <div class="doctor-photo-wrap">
+          <img src="WhatsApp Image 2026-10-27 at 12.04.17.jpeg" alt="Dr. Hitesh Panchal - Consultant Gastroenterology Medanta" class="doctor-photo">
+        </div>
+        <div class="doctor-info">
+          <span class="doctor-tag">Gastroenterology & Advanced Endoscopy</span>
+          <h3>Dr. Hitesh Panchal</h3>
+          <div class="doctor-designation">Consultant – Gastroenterology</div>
+          <div class="doctor-quals">DrNB (Gastroenterology) • M.D. (Internal Medicine) • M.B.B.S.</div>
+          <p class="doctor-desc">High-volume specialist in diagnostic and interventional EUS, transluminal necrosis drainage, direct necrosectomy (DEN), pancreatic duct stone clearance, and longitudinal care of acute and chronic pancreatitis.</p>
+          <div class="doctor-loc">🏥 Medanta – The Medicity, Gurugram</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Detailed Conditions Section -->
+<section class="section soft" id="conditions">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="badge">Comprehensive Clinical Scope</span>
+      <h2>Pancreatic Conditions Evaluated & Managed</h2>
+      <p>Precision diagnostics and individualized treatment pathways tailored to acute pathophysiology, structural ductal changes, and malignant risk factors.</p>
+    </div>
+    
+    <div class="grid grid-3">
+      <!-- Acute Pancreatitis -->
+      <article class="card">
+        <div class="card-content">
+          <div class="icon-box">◉</div>
+          <h3>Acute Pancreatitis</h3>
+          <p>Sudden parenchymal autodigestion ranging from mild interstitial edematous inflammation to severe necrotizing pancreatitis requiring multi-system ICU stabilization.</p>
+          <ul class="clinical-list">
+            <li><strong>Etiology Investigation:</strong> Choledocholithiasis, hypertriglyceridemia, alcohol, hypercalcemia, and drug-induced etiologies.</li>
+            <li><strong>Organ Rescue Protocols:</strong> Early aggressive goal-directed crystalloid hydration and enteral micro-feeding.</li>
+            <li><strong>Biliary Intervention:</strong> Emergency ERCP sphincterotomy within 24–48 hours for concomitant acute cholangitis.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Chronic Pancreatitis -->
+      <article class="card">
+        <div class="card-content">
+          <div class="icon-box">↻</div>
+          <h3>Chronic Pancreatitis</h3>
+          <p>Progressive fibro-inflammatory destruction leading to permanent parenchymal loss, ductal calcifications, disabling neural pain, and metabolic insufficiency.</p>
+          <ul class="clinical-list">
+            <li><strong>Ductal Obstruction:</strong> Extracorporeal shock wave lithotripsy (ESWL) followed by ERCP stone retrieval.</li>
+            <li><strong>Stricture Dilatation:</strong> Serial high-caliber plastic or self-expanding covered metal stenting across strictures.</li>
+            <li><strong>Exocrine & Endocrine Care:</strong> Weight-adjusted Pancreatic Enzyme Replacement Therapy (PERT) and brittle diabetes control.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Pancreatic Cysts -->
+      <article class="card">
+        <div class="card-content">
+          <div class="icon-box">◇</div>
+          <h3>Pancreatic Cysts & IPMNs</h3>
+          <p>High-resolution differentiation between benign serous cystadenomas and premalignant mucinous lesions (IPMN, Mucinous Cystic Neoplasm).</p>
+          <ul class="clinical-list">
+            <li><strong>High-Resolution EUS:</strong> Micro-cystic vs. macro-cystic delineation, mural nodule sizing, and septal evaluation.</li>
+            <li><strong>Cyst Fluid Analysis:</strong> CEA, amylase, glucose, and cytology to classify mucinous potential.</li>
+            <li><strong>Fukuoka/AGA Guidelines:</strong> Structured surveillance intervals to prevent unnecessary resections.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- WON & Necrosectomy -->
+      <article class="card">
+        <div class="card-content">
+          <div class="icon-box">⇄</div>
+          <h3>Walled-Off Necrosis (WON)</h3>
+          <p>Encapsulated collections of necrotic pancreatic parenchymal and peripancreatic tissue developing 4 or more weeks after necrotizing pancreatitis.</p>
+          <ul class="clinical-list">
+            <li><strong>Step-Up Approach:</strong> Conservative stabilization followed by minimally invasive transluminal drainage.</li>
+            <li><strong>LAMS Stenting:</strong> Large-diameter lumen-apposing metal stents (Hot-Axios) placed under direct EUS visualization.</li>
+            <li><strong>Direct Necrosectomy (DEN):</strong> Serial endoscopic debridement of infected solid non-vascular debris.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Pancreatic Tumors & NETs -->
+      <article class="card">
+        <div class="card-content">
+          <div class="icon-box">◎</div>
+          <h3>Pancreatic Tumors & NETs</h3>
+          <p>Rapid diagnostic work-up and tissue acquisition for ductal adenocarcinoma, solid pseudopapillary neoplasms, and functional/non-functional neuroendocrine tumors.</p>
+          <ul class="clinical-list">
+            <li><strong>Core Biopsy (FNB):</strong> 22G/25G Franseen or fork-tip needle cores for Ki-67 proliferation and immunohistochemistry.</li>
+            <li><strong>Vascular Staging:</strong> Multi-detector CT/MRI and EUS assessment of celiac axis and mesenteric vessels.</li>
+            <li><strong>Tumor Board Review:</strong> Coordinated with HPB surgical oncology and systemic chemotherapy teams.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- DPDS -->
+      <article class="card">
+        <div class="card-content">
+          <div class="icon-box">⌁</div>
+          <h3>Disconnected Duct Syndrome</h3>
+          <p>Full-thickness transection of the main pancreatic duct caused by central necrosis, resulting in viable isolated upstream tissue that continues secreting.</p>
+          <ul class="clinical-list">
+            <li><strong>Pathology Recognition:</strong> Persistent non-healing fluid collections or pancreaticocutaneous fistulae.</li>
+            <li><strong>Internal Bridging:</strong> Long-term indwelling double-pigtail plastic stents placed through the stomach wall.</li>
+            <li><strong>Surgical Sparing:</strong> Long-term internal transluminal drainage avoiding distal pancreatectomy.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Detailed Treatments Section -->
+<section class="section" id="treatments">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="badge">Interventional Suite Capabilities</span>
+      <h2>Advanced Endoscopic Procedures</h2>
+      <p>State-of-the-art procedures performed in specialized digital fluoroscopy and therapeutic echoendoscopy theaters at Medanta Gurugram.</p>
+    </div>
+
+    <div class="procedure-grid">
+      <!-- EUS Drainage -->
+      <div class="procedure-detail-card">
+        <h3>EUS Cystogastrostomy & Pseudocyst Drainage <span class="procedure-badge">Therapeutic EUS</span></h3>
+        <p>Using real-time curvilinear echoendoscopic imaging with color Doppler flow mapping, an unobstructed needle trajectory from the stomach or duodenal bulb into the fluid collection is established under continuous visualization, followed by cautery-enhanced stenting.</p>
+        <div class="tech-points">
+          <strong>Clinical Value:</strong> Eliminates external surgical drains, dramatically reduces secondary infection rates, and provides complete internal resolution with minimal hospital stay.
+        </div>
+      </div>
+
+      <!-- Endoscopic Necrosectomy -->
+      <div class="procedure-detail-card">
+        <h3>Direct Endoscopic Necrosectomy (DEN) <span class="procedure-badge">Advanced Transluminal</span></h3>
+        <p>For patients with infected pancreatic necrosis, a high-caliber lumen-apposing stent provides a conduit through which a gastroscope enters directly into the retroperitoneal necrotic cavity. Debridement is executed using snares, Roth nets, and water-jet irrigation.</p>
+        <div class="tech-points">
+          <strong>Clinical Value:</strong> Replaces traumatic open surgical necrosectomy, reduces organ failure exacerbation, and accelerates recovery in critically ill patients.
+        </div>
+      </div>
+
+      <!-- Pancreatic ERCP -->
+      <div class="procedure-detail-card">
+        <h3>Therapeutic Pancreatic ERCP <span class="procedure-badge">Fluoroscopic Access</span></h3>
+        <p>Cannulation of the minor and major duodenal papillae with selective guidewire cannulation of the main pancreatic duct (Wirsung). Includes high-pressure balloon dilatation of tight strictures, pancreatic sphincterotomy, and clearance of intraductal calculi.</p>
+        <div class="tech-points">
+          <strong>Clinical Value:</strong> Re-establishes physiological pancreatic drainage, relieves severe chronic intraductal hypertension, and prevents recurrent acute flare-ups.
+        </div>
+      </div>
+
+      <!-- EUS-FNB -->
+      <div class="procedure-detail-card">
+        <h3>EUS-Guided Fine Needle Biopsy (FNB) <span class="procedure-badge">Histopathology</span></h3>
+        <p>Using next-generation geometry needles (Franseen and fork-tip core needles), architectural tissue cores are obtained from solid pancreatic head/body/tail lesions without breaching abdominal skin, offering immediate Rapid On-Site Evaluation (ROSE).</p>
+        <div class="tech-points">
+          <strong>Clinical Value:</strong> Achieves diagnostic sensitivity exceeding 95% for malignancy, allowing immediate immunohistochemical profiling and targeted oncological therapy.
+        </div>
+      </div>
+
+      <!-- EUS-RFA -->
+      <div class="procedure-detail-card">
+        <h3>EUS-Guided Radiofrequency Ablation (RFA) <span class="procedure-badge">Ablative Therapy</span></h3>
+        <p>A specialized 19G needle electrode delivers targeted high-frequency thermal energy directly into neuroendocrine tumors (insulinomas, non-functioning NETs) or selected locally advanced cystic lesions under direct sonographic control with internal cooling.</p>
+        <div class="tech-points">
+          <strong>Clinical Value:</strong> Offers a parenchymal-sparing, non-surgical alternative for patients with small functional NETs or poor candidates for major pancreatic resection.
+        </div>
+      </div>
+
+      <!-- Celiac Block -->
+      <div class="procedure-detail-card">
+        <h3>Celiac Plexus Neurolysis & Block (CPN/CPB) <span class="procedure-badge">Targeted Pain Care</span></h3>
+        <p>Sonographically guided injection of bupivacaine and absolute ethanol directly into the pre-aortic celiac ganglia at the takeoff of the celiac artery to chemically ablate autonomic nociceptive transmission from the pancreas.</p>
+        <div class="tech-points">
+          <strong>Clinical Value:</strong> Dramatically reduces narcotic dependency, treats intractable malignant and chronic pain, and mitigates debilitating opioid-induced constipation.
+        </div>
+      </div>
+
+      <!-- Coil & Glue -->
+      <div class="procedure-detail-card">
+        <h3>EUS-Guided Coil & Cyanoacrylate Glue Injection <span class="procedure-badge">Vascular Intervention</span></h3>
+        <p>Sinistral or left-sided portal hypertension caused by splenic vein thrombosis in pancreatitis can trigger life-threatening fundal gastric varices. Synthetic micro-coils followed by N-butyl-2-cyanoacrylate glue are deployed under endosonographic control.</p>
+        <div class="tech-points">
+          <strong>Clinical Value:</strong> Significantly reduces distant pulmonary glue embolization compared to blind endoscopic injection while securing rapid hemostatic variceal obliteration.
+        </div>
+      </div>
+
+      <!-- Exocrine Support -->
+      <div class="procedure-detail-card">
+        <h3>Pancreatic Exocrine & Metabolic Optimization <span class="procedure-badge">Longitudinal Care</span></h3>
+        <p>Systematic screening for steatorrhea, fat-soluble vitamin malabsorption (A, D, E, K), and early endocrine failure. Protocols include enteric-coated enzyme dosing timed with meal composition and structured management of pancreatogenic (Type 3c) diabetes.</p>
+        <div class="tech-points">
+          <strong>Clinical Value:</strong> Prevents progressive osteopenia, reverses severe involuntary weight loss, and stabilizes brittle postprandial glucose swings.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section soft" id="contact">
+  <div class="wrap">
+    <div class="cta-box">
+      <div>
+        <h2>Pancreas Comprehensive Care</h2>
+        <p>For specialist consultations, acute emergency transfers, or multidisciplinary second opinions, connect directly with the specialized clinical coordinators at Medanta – The Medicity.</p>
+      </div>
+      <a class="btn light" href="tel:+917984434399">📞 Call: +91 79844 34399</a>
+    </div>
+
+    <div class="grid grid-2" style="margin-top:25px">
+      <div class="card">
+        <div class="icon-box">⌖</div>
+        <h3>Hospital Location</h3>
+        <p><strong>Institute of Digestive and Hepatobiliary Sciences</strong><br>
+        Medanta – The Medicity<br>
+        Sector 38, CH Bakhtawar Singh Road, Gurugram, Haryana – 122001, India</p>
+      </div>
+      <div class="card">
+        <div class="icon-box">📞</div>
+        <h3>Appointments & Referrals</h3>
+        <p><strong>Direct Helpline / Mobile:</strong> <a href="tel:+917984434399" style="color:var(--red-primary);font-weight:750">+91 79844 34399</a></p>
+        <p><strong>OPD Clinic Schedule:</strong> Monday to Saturday (By Prior Appointment)</p>
+        <p><strong>Emergency Coverage:</strong> 24x7 In-Hospital Pancreatic Endoscopy & Critical Care</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h3 style="color:#ffffff">Pancreas Comprehensive Care</h3>
+        <p>Tertiary pancreatobiliary referral unit at Medanta – The Medicity, Gurugram, led by Dr. Rajesh Puri (Vice Chairman) and Dr. Hitesh Panchal (Consultant).</p>
+      </div>
+      <div>
+        <h3>Quick Navigation</h3>
+        <ul>
+          <li><a href="#conditions">Conditions Evaluated</a></li>
+          <li><a href="#treatments">Interventional Procedures</a></li>
+          <li><a href="#team">Our Specialists</a></li>
+          <li><a href="#contact">OPD & Appointments</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Emergency & Contact</h3>
+        <p>Dedicated Line: <a href="tel:+917984434399" style="color:#ff8a80;font-weight:700">+91 79844 34399</a></p>
+        <p>Medanta – The Medicity, Sector 38, Gurugram, Haryana, India.</p>
+      </div>
+    </div>
+    <div class="copyright">
+      © <span id="year"></span> Pancreas Comprehensive Care. All rights reserved. Medanta – The Medicity, Gurugram.
+    </div>
+  </div>
+</footer>
+
+<script>
+const menuBtn=document.getElementById('menuBtn'),navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'✕':'☰'});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰'}));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
